@@ -2,14 +2,20 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "@sectiontn/otp-input": ["./src/index"]
+      "@sectiontn/otp-input": [
+        "./src/index"
+      ]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "noEmit": false,
     "jsx": "react",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
