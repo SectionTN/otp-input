@@ -1,6 +1,6 @@
 {
   "name": "@sectiontn/otp-input",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An elegant and highly customizable One-Time Password (OTP) input library designed to simplify the implementation and enhance the user experience of OTP authentication flows in React Native Applications.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -159,8 +159,6 @@
     ]
   },
   "dependencies": {
-    "@react-navigation/native": "^6.1.17",
-    "@react-navigation/stack": "^6.3.29",
     "lodash": "^4.17.21"
   }
 }
