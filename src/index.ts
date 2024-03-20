@@ -1,3 +1,4 @@
-import OTPTextInput from './OTPTextInput';
+import OTPTextInput, { type OTPTextInputHandle } from './OTPTextInput';
 
 export { OTPTextInput };
+export type { OTPTextInputHandle };
