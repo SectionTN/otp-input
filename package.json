@@ -31,8 +31,7 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "lint-fix": "eslint --fix \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
-    "prepare": "bob build",
-    "release": "release-it"
+    "prepare": "bob build"
   },
   "keywords": [
     "react-native",
@@ -71,7 +70,6 @@
     "react": "18.2.0",
     "react-native": "0.73.5",
     "react-native-builder-bob": "^0.20.0",
-    "release-it": "^17.1.1",
     "typescript": "5.0.4"
   },
   "resolutions": {
