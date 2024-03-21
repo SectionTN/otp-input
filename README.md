@@ -26,8 +26,9 @@ These screenshots show the OTP Text Input in action, with different styles and c
 # 🎞️ Gifs
 <div style="text-align: left; flex-direction: row">
 <img src="assets/advanced.gif" width="300px" height="550px" alt="Advanced Usage">
-<img src="assets/web.gif" width="650px" height="550px" alt="Web Usage">
 </div>
+
+Web Demo Gif: [Web Gif](assets/web.gif)
 
 ## 💻 Installation
 NPM:
