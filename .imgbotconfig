@@ -1,5 +1,5 @@
 {
-    "schedule": "monthly",
+    "schedule": "daily",
     "ignoredFiles": [],
     "aggressiveCompression": "true",
     "compressWiki": "true",
