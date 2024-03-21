@@ -21,9 +21,7 @@ These screenshots show the OTP Text Input in action, with different styles and c
 <img src="assets/screenshot_three.jpg" alt="screeenshot_one" width="250px" height="550px">
 <img src="assets/screenshot_two.jpg" alt="screeenshot_one" width="250px" height="550px">
 <img src="assets/screenshot_one.jpg" alt="screeenshot_one" width="250px" height="550px">
-
 </div>
-
 
 ## 💻 Installation
 NPM:
