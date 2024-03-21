@@ -1,20 +1,19 @@
-# OTP Text Input
+# 🗝️ OTP Text Input
 
 An elegant and highly customizable One-Time Password (OTP) input library designed to simplify the implementation and enhance the user experience of OTP authentication flows in React Native Applications.
 
-* Written in TypeScript.
-* Supports Android / iOS / Web.
-* Highly customizable.
-* Easy to use.
-* Lightweight.
-* Fully responsive.
-* Supports RTL.
-* Supports Dark Mode.
-* Supports custom styles.
-* Supports custom keyboard types.
+* ✍ Written in TypeScript.
+* 📱 Supports Android / iOS / Web.
+* 🎨 Highly customizable.
+* 🚀 Easy to use.
+* 🍃 Lightweight.
+* 📏 Fully responsive.
+* 🌐 Supports RTL.
+* 🌛 Supports Dark Mode.
+* 💅 Supports custom styles.
+* 🎹 Supports custom keyboard types.
 
-
-## Screenshots
+## 📸 Screenshots
 
 These screenshots show the OTP Text Input in action, with different styles and configurations. taken from the example project below.
 
@@ -26,17 +25,17 @@ These screenshots show the OTP Text Input in action, with different styles and c
 </div>
 
 
-## Installation
-
+## 💻 Installation
+NPM:
 ```sh
 npm install @sectiontn/otp-input
 ```
-OR
+YARN:
 ```sh
 yarn add @sectiontn/otp-input
 ```
 
-## Imports
+## ➕ Imports
 
 Import the `OTP` component from the `@sectiontn/otp-input` package and use it in your React Native application.
 
@@ -49,7 +48,7 @@ You may need to import type `OTPTextViewHandle` to use the `ref` on the componen
 ```typescript jsx
 import { OTPTextInput, type OTPTextViewHandle } from '@sectiontn/otp-input';
 ```
-## Usage
+## ♻ Usage
 Call the `OTPTextInput` component in your JSX code and pass the required props to customize the OTP input field.
 
 ```typescript jsx
@@ -66,18 +65,38 @@ import { Platform } from 'react-native';
 />
 ```
 
-## Example
+## 🧱 Props
+
+There's no required prop as you can see, if you pass an empty props eg, `<OTPTextInput />`, the component will work with the default values.
+
+| Prop name | Type | Default Value | Description |
+| :--- | :--- |:--------------| :--- |
+| defaultValue | string | " "            | The default value for the OTP input |
+| inputCount | number | 4             | The number of OTP input fields |
+| tintColor | string | '#566193'     | The color of the focused OTP input field |
+| offTintColor | string | '#DADADA'     | The color of the non-focused OTP input fields |
+| inputMaxLength | number | 1             | The maximum length of each OTP input field |
+| containerStyle | object | {}            | The custom style for the OTP container component |
+| textInputStyle | object | {}            | The custom style for the OTP text inputs |
+| onTextChangeHandler | function | undefined     | Call back function to handle OTP text change |
+| onBlur | function | undefined     | Called when an input field loses focus |
+| onFocus | function | undefined     | Called when an input field gets focus |
+| keyboardType | KeyboardTypeOptions | 'numeric'     | Determines the type of keyboard to be displayed |
+| editable | boolean | true          | Determines whether or not the OTP input is editable |
+| autoFocus | boolean | true          | Determines whether or not the first input field should automatically get focus |
+
+## 🔍 Example
 
 Full Example: Check the example at [OTP Input Example](https://github.com/SectionTN/otp-input-example) made with react-native-cli.
 <br>
 <br>
 Advanced Usage: [Expo Snack Demo](https://snack.expo.dev/@sectiontn/otptextinput-advanced-example)
 
-## Contributing
+## 🤝 Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
-## License [GPLv3 license](./LICENSE).
+## 📜 License [GPLv3 license](./LICENSE).
 
     Copyright (C) 2024 Mohamed Rayen Sbai
 
