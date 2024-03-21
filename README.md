@@ -1,22 +1,64 @@
-# @sectiontn/otp-input
+# OTP Text Input
 
 An elegant and highly customizable One-Time Password (OTP) input library designed to simplify the implementation and enhance the user experience of OTP authentication flows in React Native Applications.
+
+* Written in TypeScript.
+* Supports Android / iOS / Web.
+* Highly customizable.
+* Easy to use.
+* Lightweight.
+* Fully responsive.
+* Supports RTL.
+* Supports Dark Mode.
+* Supports custom styles.
+* Supports custom keyboard types.
 
 ## Installation
 
 ```sh
 npm install @sectiontn/otp-input
 ```
-
-## Usage
-
-```js
-import { multiply } from '@sectiontn/otp-input';
-
-// ...
-
-const result = await multiply(3, 7);
+OR
+```sh
+yarn add @sectiontn/otp-input
 ```
+
+## Imports
+
+Import the `OTP` component from the `@sectiontn/otp-input` package and use it in your React Native application.
+
+```typescript jsx
+import { OTPTextInput } from '@sectiontn/otp-input';
+```
+
+You may need to import type `OTPTextViewHandle` to use the `ref` on the component.
+
+```typescript jsx
+import { OTPTextInput, type OTPTextViewHandle } from '@sectiontn/otp-input';
+```
+## Usage
+Call the `OTPTextInput` component in your JSX code and pass the required props to customize the OTP input field.
+
+```typescript jsx
+import { Platform } from 'react-native';
+
+<OTPTextInput
+  inputCount={4}
+  tintColor={"#FF6F61"}
+  offTintColor={"#BBBCBE"}
+  onTextChangeHandler={(pin: string) => {
+    console.log('Current OTP:', pin);
+  }}
+  keyboardType={Platform.OS === 'ios' ? 'number-pad' : 'numeric'}
+/>
+```
+
+## Example
+
+Full Example: Check the example at [OTP Input Example](https://github.com/SectionTN/otp-input-example) made with react-native-cli.
+<br>
+<br>
+Advanced Usage: [Expo Snack Demo](https://snack.expo.dev/@sectiontn/otptextinput-advanced-example)
 
 ## Contributing
 
