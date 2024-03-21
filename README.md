@@ -13,6 +13,19 @@ An elegant and highly customizable One-Time Password (OTP) input library designe
 * Supports custom styles.
 * Supports custom keyboard types.
 
+
+## Screenshots
+
+These screenshots show the OTP Text Input in action, with different styles and configurations. taken from the example project below.
+
+<div style="text-align: left; flex-direction: row">
+<img src="assets/screenshot_three.jpg" alt="screeenshot_one" width="250px" height="550px">
+<img src="assets/screenshot_two.jpg" alt="screeenshot_one" width="250px" height="550px">
+<img src="assets/screenshot_one.jpg" alt="screeenshot_one" width="250px" height="550px">
+
+</div>
+
+
 ## Installation
 
 ```sh
@@ -31,7 +44,7 @@ Import the `OTP` component from the `@sectiontn/otp-input` package and use it in
 import { OTPTextInput } from '@sectiontn/otp-input';
 ```
 
-You may need to import type `OTPTextViewHandle` to use the `ref` on the component.
+You may need to import type `OTPTextViewHandle` to use the `ref` on the component (if you use TypeScript).
 
 ```typescript jsx
 import { OTPTextInput, type OTPTextViewHandle } from '@sectiontn/otp-input';
