@@ -81,21 +81,26 @@ import { Platform } from 'react-native';
 
 There's no required prop as you can see, if you pass an empty props eg, `<OTPTextInput />`, the component will work with the default values.
 
-| Prop name           | Type                | Default Value | Description                                                                    |
-|:--------------------|:--------------------|:--------------|:-------------------------------------------------------------------------------|
-| defaultValue        | string              | " "           | The default value for the OTP input                                            |
-| inputCount          | number              | 4             | The number of OTP input fields                                                 |
-| tintColor           | string              | '#566193'     | The color of the focused OTP input field                                       |
-| offTintColor        | string              | '#DADADA'     | The color of the non-focused OTP input fields                                  |
-| inputMaxLength      | number              | 1             | The maximum length of each OTP input field                                     |
-| containerStyle      | object              | {}            | The custom style for the OTP container component                               |
-| textInputStyle      | object              | {}            | The custom style for the OTP text inputs                                       |
-| onTextChangeHandler | function            | undefined     | Call back function to handle OTP text change                                   |
-| onBlur              | function            | undefined     | Called when an input field loses focus                                         |
-| onFocus             | function            | undefined     | Called when an input field gets focus                                          |
-| keyboardType        | KeyboardTypeOptions | 'numeric'     | Determines the type of keyboard to be displayed                                |
-| editable            | boolean             | true          | Determines whether or not the OTP input is editable                            |
-| autoFocus           | boolean             | true          | Determines whether or not the first input field should automatically get focus |
+| Prop name           | Type                | Default Value | Description                                                                      |
+|:--------------------|:--------------------|:--------------|:---------------------------------------------------------------------------------|
+| defaultValue        | string              | " "           | The default value for the OTP input                                              |
+| inputCount          | number              | 4             | The number of OTP input fields                                                   |
+| tintColor           | string              | '#566193'     | The color of the focused OTP input field                                         |
+| offTintColor        | string              | '#DADADA'     | The color of the non-focused OTP input fields                                    |
+| inputMaxLength      | number              | 1             | The maximum length of each OTP input field                                       |
+| containerStyle      | object              | {}            | The custom style for the OTP container component                                 |
+| textInputStyle      | object              | {}            | The custom style for the OTP text inputs                                         |
+| onTextChangeHandler | function            | undefined     | Call back function to handle OTP text change                                     |
+| onBlur              | function            | undefined     | Called when an input field loses focus                                           |
+| onFocus             | function            | undefined     | Called when an input field gets focus                                            |
+| keyboardType        | KeyboardTypeOptions | 'numeric'     | Determines the type of keyboard to be displayed                                  |
+| editable            | boolean             | true          | Determines whether or not the OTP input is editable                              |
+| autoFocus           | boolean             | true          | Determines whether or not the first input field should automatically get focus   |
+| useNumbersRegex     | boolean             | true          | If true, the input will be validated against a default number-based regex        |
+| useCustomRegex      | boolean             | false         | If true, a custom regex set by customRegex prop will be used for validation      |
+| customRegex         | RegExp              | '\\d*'        | This provides the custom regex for input validation when useCustomRegex is true. |
+
+**NB**: you cannot use both `useNumbersRegex` and `useCustomRegex` at the same time.
 
 ## 🔍 Example
 
