@@ -52,6 +52,8 @@ You may need to import type `OTPTextViewHandle` to use the `ref` on the componen
 
 ```typescript jsx
 import { OTPTextInput, type OTPTextViewHandle } from '@sectiontn/otp-input';
+// Later in your component.
+const OTPRef = useRef<OTPTextViewHandle || null>(null);
 ```
 ## ♻ Usage
 Call the `OTPTextInput` component in your JSX code and pass the required props to customize the OTP input field.
@@ -59,13 +61,18 @@ Call the `OTPTextInput` component in your JSX code and pass the required props t
 ```typescript jsx
 import { Platform } from 'react-native';
 
+// later in your component's render
+
 <OTPTextInput
+  ref={OTPRef}
   inputCount={4}
   tintColor={"#FF6F61"}
   offTintColor={"#BBBCBE"}
   onTextChangeHandler={(pin: string) => {
     console.log('Current OTP:', pin);
   }}
+  editable={true}
+  autoFocus={true}
   keyboardType={Platform.OS === 'ios' ? 'number-pad' : 'numeric'}
 />
 ```
@@ -117,5 +124,13 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+## ❤️ Support
+
+<p>
+<a href="https://www.buymeacoffee.com/sectiontn">
+<img style="text-align: left;" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="sectiontn" />
+</a>
+</p>
 
 Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

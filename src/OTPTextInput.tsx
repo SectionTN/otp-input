@@ -41,6 +41,10 @@ interface OTPTextInputProps {
   onFocus?: (index: number) => void;
   onBlur?: (index: number) => void;
   autoFocus?: boolean;
+  useNumbersRegex?: boolean;
+  useLettersRegex?: boolean;
+  useCustomRegex?: boolean;
+  customRegex?: RegExp;
 }
 
 export interface OTPTextInputHandle {
@@ -86,9 +90,42 @@ const OTPTextInput = forwardRef<OTPTextInputHandle, OTPTextInputProps>(
       keyboardType = 'numeric',
       editable = true,
       autoFocus = true,
+      useNumbersRegex = true,
+      useCustomRegex = false,
+      customRegex = undefined,
     },
     ref
   ) => {
+    /**
+     *
+     */
+    if (useNumbersRegex && useCustomRegex) {
+      throw new Error(
+        'You cannot set both useNumbersRegex and useCustomRegex to true!'
+      );
+    }
+
+    /**
+     * The regular expression used for matching strings based on certain conditions.
+     *
+     * @type {RegExp}
+     *
+     * @param {boolean} useNumbersRegex - Determines if only digits should be matched.
+     * @param {boolean} useCustomRegex - Determines if a custom regular expression should be used.
+     * @param {RegExp} customRegex - The custom regular expression provided by the user.
+     *
+     * @returns {RegExp} - The regular expression that matches strings based on the given conditions.
+     */
+    const regex: RegExp = useMemo(() => {
+      if (useNumbersRegex) {
+        return new RegExp('\\d*'); // Only numbers allowed.
+      } else if (useCustomRegex && customRegex) {
+        return customRegex; // User supplied regex.
+      }
+
+      return new RegExp('.*'); // Default regex (rarely used?) maybe the user doesn't want to use any regex.
+    }, [useNumbersRegex, useCustomRegex, customRegex]);
+
     const [focusedInput, setFocusedInput] = useState(0);
     const [otpText, setOtpText] = useState<string[]>(
       Array.from({ length: inputCount }, (_, i) => defaultValue[i] || '')
@@ -162,14 +199,17 @@ const OTPTextInput = forwardRef<OTPTextInputHandle, OTPTextInputProps>(
      */
     const onTextChange = useCallback(
       (text: string, position: number): void => {
+        if (!regex.test(text)) {
+          return; // Do not update the OTP value if the text does not match the regex
+        }
         const newOtp = [...otpText];
         newOtp[position] = text;
-        if (text.length === inputMaxLength && position !== inputCount - 1) {
+        if (text?.length === inputMaxLength && position !== inputCount - 1) {
           setFocusedInput(position + 1);
         }
         updateOTP(newOtp);
       },
-      [inputMaxLength, inputCount, otpText, updateOTP]
+      [regex, otpText, inputMaxLength, inputCount, updateOTP]
     );
 
     /**
