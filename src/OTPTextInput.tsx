@@ -167,7 +167,7 @@ const OTPTextInput = forwardRef<OTPTextInputHandle, OTPTextInputProps>(
 
     /**
      * Variable debounceOnTextChangeHandler is a memoized version of the function onTextChangeHandler
-     * with a debounce implemented using lodash.debounce.
+     * with a debounced implemented using lodash.debounce.
      *
      */
     const debounceOnTextChangeHandler = useMemo(

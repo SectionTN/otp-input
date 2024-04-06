@@ -35,9 +35,21 @@
     "release": "release-it"
   },
   "keywords": [
-    "react-native",
+    "otp-input",
     "ios",
-    "android"
+    "android",
+    "react-native",
+    "otp",
+    "input",
+    "authentication",
+    "verification",
+    "code-input",
+    "mobile",
+    "new-arch-compatible-otp-input",
+    "otp-text-input",
+    "two-factor-authentication",
+    "2FA-otp-input",
+    "phone-number"
   ],
   "repository": {
     "type": "git",
