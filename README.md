@@ -53,7 +53,7 @@ You may need to import type `OTPTextViewHandle` to use the `ref` on the componen
 ```typescript jsx
 import { OTPTextInput, type OTPTextInputHandle } from '@sectiontn/otp-input';
 // Later in your component.
-const OTPRef = useRef<OTPTextInputHandle || null>(null);
+const OTPRef = useRef<OTPTextInputHandle | null>(null);
 ```
 ## ♻ Usage
 Call the `OTPTextInput` component in your JSX code and pass the required props to customize the OTP input field.
